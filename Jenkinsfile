@@ -23,14 +23,18 @@ pipeline {
             steps {
                 script{
                     sh """
-                        echo "Testing"
+                        echo "Building"
                     """
                 }
             }
         }
         stage('Deploy') {
             steps {
-                echo "Depoying"
+                script{
+                    sh """
+                        echo "Building"
+                    """
+                }
             }
         }
     }
